@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Result Page</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a style="text-decoration:none;" class="navbar-brand" href="/"><b>ImageToTextConverter</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse menu-main" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto menu-item">
+                    <li class="nav-item">
+                        <a style="text-decoration:none;" class="nav-link" href="/">home</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="banner">
+            <div class="container zindex">
+                <div style="padding-left: 20px; padding-right: 20px">
+                   <img
+                        src="{{img}}"
+                        alt="Uploaded Image"
+                        width="300px"
+                        style="margin: auto; border-radius: 10px; margin-bottom: 8px"
+                    />
+                    <br>
+                    <hr>
+                   <h3>Text Found in the Image:</h3>
+                    <hr>
+                    <h5
+                        style="
+                            color: #121212;
+                            font-size: 15px;
+                            font-family: 'Poppins', sans-serif;
+                            text-align: left;
+                            padding-bottom: 20px;
+                        "
+                    >
+                        {{var}}
+                    </h5>
+                    <div>
+                        <P></P>
+                    </div>
+
+                    <a
+                        href="{{url_for('gettext')}}"
+                        style="
+                            display: inline-block;
+                            text-align: center;
+                            border-radius: 10px;
+                            text-decoration: none;
+                            height: 30px;
+                            width: 100px;
+                            font-family: 'Poppins', sans-serif;
+                            background: black;
+                            border: 0px;
+                            color: white;
+                        "
+                        >Download</a
+                    >
+                </div>
+            </div>
+        </section>
+   
+    
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
