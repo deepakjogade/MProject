@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <title>Get Started</title>
+</head>
+<body>
+
+    <div><h1>Image To Text Converter</h1>
+    <h3>Convert Image to text In the browser:</h3>
+    <button id="but1" type="submit">Get Started</button>
+    <h2>How it Works</h2></div>
+    
+<!-- javascript -->
+    <script type="text/javascript">
+        document.getElementById("but1").onclick = function () {
+        location.href = "{{ url_for('login') }}";
+        };
+        </script>
+</body>
+</html>

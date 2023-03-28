@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <!-- Nav bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a style="text-decoration:none;" class="navbar-brand" href="/"><b>ImageToTextConverter</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse menu-main" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto menu-item">
+                    <li class="nav-item">
+                        <a style="text-decoration:none;" class="nav-link" href="{{url_for('about')}}">about</a>
+                    </li>
+                </ul>
+                </div>
+        </div>
+    </nav>
+
+    <!-- main body -->
+
+    <section  id="banner">
+        <div class="container zindex">
+            <div class="row">
+                <div class="col-lg-7 banner-txt">
+                    <hr>
+                    <h3>Upload image</h3>
+                    <hr>
+              <form action = "{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+    <input  type="file" name="image_file" value="{{request.form.image_file}}" id="fileToUpload">
+    <input  type="submit" value="Upload" name="submit" id="submit"></form>
+                </div>
+            </div>
+        </div>
+            </section>
+
+    <!-- footer -->
+</body>
+</html>
